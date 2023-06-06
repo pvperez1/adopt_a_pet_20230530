@@ -39,14 +39,13 @@ def processing():
 @app.route('/modify', methods=['post'])
 def modify():
     # 1. identify whether user clicked edit or delete
+       # if edit, then do this:
     if request.form["modify"] == "edit":
-        pet_id = request.form["pet_id"]
-        pet = read_pet_by_pet_id(pet_id)
-        return render_template('update.html', pet=pet)
-    # if edit, then do this:
         # retrieve record using id
+        pet_id = request.form["pet_id"] 
+        pet = read_pet_by_pet_id(pet_id)
         # update record with new data
-        # redirect user to pet profile page
+        return render_template('update.html', pet=pet)
     # if delete, then do this
     elif request.form["modify"] == "delete":
         pass
