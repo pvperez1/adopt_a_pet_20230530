@@ -51,6 +51,7 @@ def modify():
         # retrieve record using id
         # delete the record
         # redirect user to pet list by pet type
+        pass
 
 @app.route('/update', methods=['post'])
 def update():
