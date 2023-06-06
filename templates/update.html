@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Register a Pet up for Adoption</h1>
-<form action="" method="post">
+<form action="{{ url_for('update') }}" method="post">
     <input type="hidden" name="pet_id" value="{{ pet.id }}">
     <label for="p_type">Type of Pet:</label>
     <select name="pet_type" id="p_type" required>

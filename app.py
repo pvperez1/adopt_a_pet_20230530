@@ -48,11 +48,9 @@ def modify():
         return render_template('update.html', pet=pet)
     # if delete, then do this
     elif request.form["modify"] == "delete":
-        pass
         # retrieve record using id
         # delete the record
         # redirect user to pet list by pet type
-    pass
 
 @app.route('/update', methods=['post'])
 def update():

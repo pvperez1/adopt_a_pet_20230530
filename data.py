@@ -41,7 +41,7 @@ def insert_pet(pet_data):
 # This function updates a record
 def update_pet(pet_data):
     conn, cur = connect_to_db(db_path)
-    query = "UPDATE pets SET (animal_type=?, name=?, age=?, breed=?, description=?, url=?) WHERE id=?"
+    query = "UPDATE pets SET animal_type=?, name=?, age=?, breed=?, description=?, url=? WHERE id=?"
     values = (pet_data['pet_type'], pet_data['name'],
               pet_data['age'], pet_data['breed'],
               pet_data['description'], pet_data['url'],
